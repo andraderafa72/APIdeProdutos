@@ -1,6 +1,9 @@
-import express from "express";
-import { router } from './routes'
+import express from 'express';
+import dotenv from 'dotenv';
+import { router } from './routes';
 
-export const app = express()
+dotenv.config();
 
-app.use(router)
+export const app = express();
+
+app.use(router);
