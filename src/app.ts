@@ -30,3 +30,5 @@ app.options('*', cors(options));
 
 app.use(express.json());
 app.use(router);
+
+app.use((req, res) => res.json({ status: 'ativo' }));

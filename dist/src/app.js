@@ -30,3 +30,4 @@ exports.app.use((0, cors_1.default)(options));
 exports.app.options('*', (0, cors_1.default)(options));
 exports.app.use(express_1.default.json());
 exports.app.use(routes_1.router);
+exports.app.use(function (req, res) { return res.json({ status: 'ativo' }); });
