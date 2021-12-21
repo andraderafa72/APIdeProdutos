@@ -11,9 +11,6 @@ import { router } from './routes';
 
 export const app = express();
 
-app.use(router);
-app.use(express.json());
-
 const options: cors.CorsOptions = {
   allowedHeaders: [
     'Origin',
@@ -30,3 +27,6 @@ const options: cors.CorsOptions = {
 app.use(helmet());
 app.use(cors(options));
 app.options('*', cors(options));
+
+app.use(router);
+app.use(express.json());

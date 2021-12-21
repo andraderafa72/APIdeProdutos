@@ -13,8 +13,6 @@ var cors_1 = __importDefault(require("cors"));
 var helmet_1 = __importDefault(require("helmet"));
 var routes_1 = require("./routes");
 exports.app = (0, express_1.default)();
-exports.app.use(routes_1.router);
-exports.app.use(express_1.default.json());
 var options = {
     allowedHeaders: [
         'Origin',
@@ -30,3 +28,5 @@ var options = {
 exports.app.use((0, helmet_1.default)());
 exports.app.use((0, cors_1.default)(options));
 exports.app.options('*', (0, cors_1.default)(options));
+exports.app.use(routes_1.router);
+exports.app.use(express_1.default.json());
