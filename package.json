@@ -22,9 +22,10 @@
     "ts-node-dev": "^1.1.8"
   },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
-    "start": "node dist/src/server.js"
+    "start": "node ./dist/src/server.js"
   },
   "keywords": [],
   "author": "",
