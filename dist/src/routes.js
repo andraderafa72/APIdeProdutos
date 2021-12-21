@@ -68,7 +68,7 @@ exports.router.get('/produtos', function (request, response) {
             estoque: 12,
         },
     ];
-    return response.json({
+    return response.status(200).json({
         products: products,
     });
 });
